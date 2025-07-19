@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var nome = "guilherme";
+      var conteudo = `O nome é ${nome}`;
+      console.log(conteudo);
+
+      {
+        // vai ficar definido apenas neste escopo
+        let nome = "guilherme";
+        let testes = function () {
+          console.log("olá!");
+        };
+        testes();
+      }
+    </script>
+  </body>
+</html>

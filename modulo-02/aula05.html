@@ -1,0 +1,46 @@
+<html>
+  <body>
+    <script>
+    function testes(){
+      //executado quando chamar a função
+
+      console.log('chamando a função testes');
+    }
+
+    function testes2(nome, idade){
+      console.log('o nome é: ' + nome);
+      console.log('a idade é: ' + idade);
+    }
+    testes();
+    testes2('jose', 27);
+    testes2('marcos', 30);
+
+
+    function pegarNome(){
+      // depois do return a função termina
+      return 'guilherme';
+
+      console.log('joge')
+    }
+
+    var nome = pegarNome(); 
+    
+    console.log(nome)
+    
+
+    function pegarNome2(parametro){
+      if(parametro == 1){
+        return 'guilherme';
+      }else{
+        return 'outro nome';
+      } 
+    }
+
+    var nome2 = pegarNome2(2); 
+    console.log(nome2);
+
+
+   
+    </script>
+  </body>
+</html>

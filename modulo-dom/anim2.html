@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+    </head>
+    <body>
+        <style>
+    .conteudo h2 span{
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .conteudo p{
+      overflow: hidden;
+      height: 10px;
+      transition: 1s;
+    }
+    .mostrar{
+      height: 200px !important;
+    }
+
+        </style>
+        <div class="conteudo">
+            <h2>
+                Título do conteúdo <span>Ver mais!</span>
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nullam quis varius nulla. Nam vel eleifend urna.
+                Morbi semper mauris purus, et commodo tortor faucibus a.
+                Nulla cursus nunc est, et cursus nunc tempor eu.
+                Quisque at nulla in neque varius egestas a et ante.
+                Sed ultricies laoreet ante, et vulputate ante dapibus in.
+                Morbi convallis, leo non aliquet lacinia, neque dolor accumsan ligula,
+                sed volutpat tellus velit vel nibh. Sed ut leo pharetra, lacinia mi nec,
+                tempor eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec vitae neque ac nunc suscipit ultricies at a ipsum. Sed vestibulum molestie
+                dignissim. Morbi congue a elit et luctus. Mauris vestibulum sed purus rhoncus
+                euismod. Quisque sit amet aliquet justo. Morbi elementum venenatis urna eget
+                scelerisque.
+            </p>
+        </div>
+        <div class="conteudo">
+            <h2>
+                Título do conteúdo <span>Ver mais!</span>
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nullam quis varius nulla. Nam vel eleifend urna.
+                Morbi semper mauris purus, et commodo tortor faucibus a.
+                Nulla cursus nunc est, et cursus nunc tempor eu.
+                Quisque at nulla in neque varius egestas a et ante.
+                Sed ultricies laoreet ante, et vulputate ante dapibus in.
+                Morbi convallis, leo non aliquet lacinia, neque dolor accumsan ligula,
+                sed volutpat tellus velit vel nibh. Sed ut leo pharetra, lacinia mi nec,
+                tempor eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec vitae neque ac nunc suscipit ultricies at a ipsum. Sed vestibulum molestie
+                dignissim. Morbi congue a elit et luctus. Mauris vestibulum sed purus rhoncus
+                euismod. Quisque sit amet aliquet justo. Morbi elementum venenatis urna eget
+                scelerisque.
+            </p>
+        </div>
+        <div class="conteudo">
+            <h2>
+                Título do conteúdo <span>Ver mais!</span>
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nullam quis varius nulla. Nam vel eleifend urna.
+                Morbi semper mauris purus, et commodo tortor faucibus a.
+                Nulla cursus nunc est, et cursus nunc tempor eu.
+                Quisque at nulla in neque varius egestas a et ante.
+                Sed ultricies laoreet ante, et vulputate ante dapibus in.
+                Morbi convallis, leo non aliquet lacinia, neque dolor accumsan ligula,
+                sed volutpat tellus velit vel nibh. Sed ut leo pharetra, lacinia mi nec,
+                tempor eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec vitae neque ac nunc suscipit ultricies at a ipsum. Sed vestibulum molestie
+                dignissim. Morbi congue a elit et luctus. Mauris vestibulum sed purus rhoncus
+                euismod. Quisque sit amet aliquet justo. Morbi elementum venenatis urna eget
+                scelerisque.
+            </p>
+        </div>
+        <div class="conteudo">
+            <h2>
+                Título do conteúdo <span>Ver mais!</span>
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nullam quis varius nulla. Nam vel eleifend urna.
+                Morbi semper mauris purus, et commodo tortor faucibus a.
+                Nulla cursus nunc est, et cursus nunc tempor eu.
+                Quisque at nulla in neque varius egestas a et ante.
+                Sed ultricies laoreet ante, et vulputate ante dapibus in.
+                Morbi convallis, leo non aliquet lacinia, neque dolor accumsan ligula,
+                sed volutpat tellus velit vel nibh. Sed ut leo pharetra, lacinia mi nec,
+                tempor eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec vitae neque ac nunc suscipit ultricies at a ipsum. Sed vestibulum molestie
+                dignissim. Morbi congue a elit et luctus. Mauris vestibulum sed purus rhoncus
+                euismod. Quisque sit amet aliquet justo. Morbi elementum venenatis urna eget
+                scelerisque.
+            </p>
+        </div>
+        <script>
+    //Seleciona todos os elementos que estão dentro de um elemento com a classe 'conteudo'
+    var spans = document.querySelectorAll('.conteudo span')
+
+    //para cada elemento encontrado, adiciona um evento de clique
+    spans.forEach(function(span){
+        span.addEventListener('click', function(){
+      //busca o próximo elemento irmão do elemento pai do clicado
+         var conteudo = this.parentElement.nextElementSibling;
+
+      //verifica se o próximo elemento já tem a classe 'mostrar'
+          if(conteudo.classList.contains('mostrar')){
+        //se tiver, altera o texto para 'Ver mais!' e remove a classe 'mostrar'
+            span.innerHTML = 'Ver mais!'; 
+            conteudo.classList.remove('mostrar')
+          }else{
+        //se não tiver, altera o texto para 'Ocultar!' e adiciona a classe 'mostrar'
+            span.innerHTML = 'Ocultar!';
+            conteudo.classList.add('mostrar');
+          }
+        });
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function testes(...nomes) {
+        console.log(nomes);
+      }
+
+      testes(1, 2, 3, 4, 5, { nome: ["guilherme"] });
+
+      function testes1(...numero) {
+        console.log(numero[0][1]);
+      }
+
+      testes1([1, 2, 3, 4, 5]);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+    </head>
+    <body>
+        <div class = 'box'></div>
+        <div class = 'box'></div>
+        <div class = 'box'></div>
+        <div class = 'box'></div>
+        <div class = 'box'></div>
+        <div class = 'box'></div>
+    </body>
+    <script>
+    var elementos = document.getElementsByClassName('box');
+
+    for(var i = 0; i< elementos.length; i++){
+      var el = elementos[i];
+
+      el.style.width = '100px';
+      el.style.height = '100px';
+      el.style.backgroundColor = 'green';
+      el.style.marginLeft = '200px';
+      el.style.marginTop = '10px';
+      el.style.borderWidth= '2px';
+      el.style.borderColor = 'grey';
+      el.style.borderStyle = 'solid';
+    }
+    </script>
+</html>
